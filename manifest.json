@@ -1,0 +1,21 @@
+{
+    "name": "No Feed",
+    "version": "1.0",
+    "description": "Remove your Facebook news feed at a click of a button.",
+    "background": {
+        "page": "background.html"
+    },
+    "manifest_version": 2,
+    "browser_action": {
+        "icons": ["icon.png"],
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [{
+        "js": ["background.js"],
+        "matches": ["https://www.facebook.com/*"]
+  }],
+    "permissions": [
+        "tabs",
+        "notifications"
+    ]
+}
